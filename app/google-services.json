@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "399961945148",
+    "project_id": "ez-booking-79f82",
+    "storage_bucket": "ez-booking-79f82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399961945148:android:770cf69e5c44c38bf23f39",
+        "android_client_info": {
+          "package_name": "com.example.ez_booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399961945148-23hi0jvmacg01513q6gtcmtue5rvj387.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgKN28fpicvkExl7Q0Ieg8Gxdzuv54ZYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399961945148-23hi0jvmacg01513q6gtcmtue5rvj387.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
