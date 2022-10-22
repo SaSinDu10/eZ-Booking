@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".destination"
+    android:layout_margin="10dp">
+
+
+    <TextView
+        android:id="@+id/txtSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Source*"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinnerSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSource"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:id="@+id/txtDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Destination*"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/spinnerSource"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDestination"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btnNext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerDestination"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Next"
+        android:textAlignment="center" />
+
+
+
+</RelativeLayout>
