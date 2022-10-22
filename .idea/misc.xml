@@ -3,13 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/eZBooking/app/src/main/res/layout/activity_destination.xml" value="0.25" />
+        <entry key="..\:/Users/assassino/Documents/ProArchives/Android/Sasindu/app/src/main/res/layout/activity_login.xml" value="0.2015625" />
+        <entry key="..\:/Users/assassino/Documents/ProArchives/Android/Sasindu/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
+        <entry key="..\:/Users/assassino/Documents/ProArchives/Android/Sasindu/app/src/main/res/layout/activity_register.xml" value="0.2015625" />
         <entry key="..\:/eZBooking/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/eZBooking/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/eZBooking/app/src/main/res/layout/activity_pay.xml" value="0.25" />
-        <entry key="..\:/eZBooking/app/src/main/res/layout/activity_register.xml" value="0.20108695652173914" />
-        <entry key="..\:/eZBooking/app/src/main/res/layout/activity_trans_mode.xml" value="0.21" />
-        <entry key="..\:/eZBooking/app/src/main/res/layout/spinner_layout.xml" value="0.14515027322404372" />
+        <entry key="..\:/eZBooking/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
