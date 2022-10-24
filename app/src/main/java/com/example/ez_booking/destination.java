@@ -38,7 +38,7 @@ public class destination extends AppCompatActivity implements AdapterView.OnItem
             public void onClick(View view) {
                 String source = spinnerSource.getSelectedItem().toString();
                 String destination = spinnerDestination.getSelectedItem().toString();
-                //Toast.makeText(activity_destination.this, source + ", "+ destination,Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity_destination.this, source + ", "+ destination,Toast.LENGTH_SHORT).show();
 
             }
         });

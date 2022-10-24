@@ -11,7 +11,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:text="What is the selection of transport mode? "
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,33 +19,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <RadioButton
         android:id="@+id/rd_bus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:text="Highway Bus"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        tools:layout_editor_absoluteY="113dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
 
     <RadioButton
         android:id="@+id/rd_train"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Train"
+        android:layout_marginTop="56dp"
 
+        android:text="Train"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rd_bus"
         tools:ignore="MissingConstraints" />
@@ -55,9 +58,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-        app:layout_constraintEnd_toEndOf="@+id/rd_bus"
-        app:layout_constraintStart_toStartOf="@+id/rd_bus"
-        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rd_train"
         tools:ignore="MissingConstraints" />
 
     />
