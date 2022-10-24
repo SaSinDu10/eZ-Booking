@@ -21,7 +21,6 @@ public class destination extends AppCompatActivity implements AdapterView.OnItem
     //String[] source;
     private Build.VERSION_CODES android;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,33 +45,28 @@ public class destination extends AppCompatActivity implements AdapterView.OnItem
 
         spinnerSource.setOnItemSelectedListener(this);
         spinnerDestination.setOnItemSelectedListener(this);
-
-
     }
 
     private void populateSpinnerSource() {
         //source = new DateFormatSymbols().getSource();
-        ArrayAdapter<String>sourceAdapter = new ArrayAdapter<>(this.android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.array_source));
-        sourceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence>sourceAdapter = ArrayAdapter.createFromResource(this, R.array.array_source, R.layout.spinner_layout);
         spinnerSource.setAdapter(sourceAdapter);
     }
 
     private void populateSpinnerDestination() {
-        ArrayAdapter<String> destinationAdapter = new ArrayAdapter<>(this.android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.array_destination));
-        destinationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence>destinationAdapter = ArrayAdapter.createFromResource(this, R.array.array_destination, R.layout.spinner_layout);
         spinnerDestination.setAdapter(destinationAdapter);
-
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-        if(parent.getId() == R.id.spinnerSource){
+        if(adapterView.getId() == R.id.spinnerSource){
             //String selectedSource = parent.getSelectedItem.toString();
-            String selectedSource = parent.getItemPosition(position).toString();
-            Toast.makeText(this,"Selected: "+selectedSource,Toast.LENGTH_SHORT).show();
-        }else if(parent.getId() == R.id.spinnerDestination){
-            String selectedDestination = parent.getSelectedItem.toString();
-            Toast.makeText(this,"Selected: "+selectedDestination,Toast.LENGTH_SHORT).show();
+            String selectedSourceItem = (String) adapterView.getSelectedItem();
+            Toast.makeText(this,"Selected: "+selectedSourceItem, Toast.LENGTH_SHORT).show();
+        }else if(adapterView.getId() == R.id.spinnerDestination){
+            String selectedDestinationItem = (String) adapterView.getSelectedItem();
+            Toast.makeText(this,"Selected: "+selectedDestinationItem, Toast.LENGTH_SHORT).show();
         }
     }
 
