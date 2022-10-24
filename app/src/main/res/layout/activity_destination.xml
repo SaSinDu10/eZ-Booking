@@ -30,32 +30,63 @@
         android:id="@+id/txtDestination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Destination*"
-        android:layout_margin="20dp"
-        android:textSize="20sp"
         android:layout_below="@+id/spinnerSource"
-        />
+        android:layout_alignStart="@+id/spinnerSource"
+        android:layout_alignEnd="@+id/spinnerSource"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="20dp"
+        android:text="Destination*"
+        android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/spinnerDestination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtDestination"
+        android:layout_alignStart="@+id/txtDestination"
+        android:layout_alignEnd="@+id/txtDestination"
+        android:layout_marginStart="-10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="-11dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/txtSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerDestination"
+        android:layout_alignEnd="@+id/spinnerDestination"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="Schedule*"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinnerSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSchedule"
+        android:layout_alignStart="@+id/txtSchedule"
+        android:layout_alignEnd="@+id/txtSchedule"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="-15dp"
         android:layout_marginBottom="10dp" />
 
     <Button
         android:id="@+id/btnNext2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerDestination"
+        android:layout_below="@+id/spinnerSchedule"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:text="Next"
         android:textAlignment="center" />
-
 
 
 </RelativeLayout>

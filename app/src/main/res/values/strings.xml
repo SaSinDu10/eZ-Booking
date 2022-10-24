@@ -9,4 +9,13 @@
         <item>Elpitiya</item>
         <item>Dodangoda</item>
     </string-array>
+
+    <string-array name="array_destination">
+        <item>Select Your Destination</item>
+        <item>Matara</item>
+        <item>Galle</item>
+        <item>Baddegama</item>
+        <item>Elpitiya</item>
+        <item>Dodangoda</item>
+    </string-array>
 </resources>
