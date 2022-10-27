@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TransMode">
+    tools:context=".TransMode"
+    android:background="@drawable/bg_image">
 
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:text="What is the selection of transport mode? "
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,11 +58,13 @@
 
     <Button
         android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
+        android:layout_width="106dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="256dp"
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         tools:ignore="MissingConstraints" />

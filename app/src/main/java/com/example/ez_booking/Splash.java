@@ -1,10 +1,12 @@
 package com.example.ez_booking;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 
 public class Splash extends AppCompatActivity {
 
@@ -19,6 +21,7 @@ public class Splash extends AppCompatActivity {
                 Intent intent = new Intent(Splash.this,TransMode.class);
                 startActivity(intent);
             }
-        },5000);
+        },3000);
     }
+
 }

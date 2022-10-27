@@ -4,18 +4,38 @@
     <string-array name="array_source">
         <item>Select Your Source</item>
         <item>Matara</item>
+        <item>Weligama</item>
         <item>Galle</item>
-        <item>Baddegama</item>
-        <item>Elpitiya</item>
-        <item>Dodangoda</item>
+        <item>Hikkaduwa</item>
+        <item>Ambalangoda</item>
+        <item>Benthota</item>
+        <item>Aluthgama</item>
+        <item>Kaluthara</item>
+        <item>Panadura</item>
+        <item>Moratuwa</item>
+        <item>Bambalapitiya</item>
+        <item>Colombo</item>
+        <item>Maradana</item>
+        <item>Ragama</item>
+        <item>Gampaha</item>
     </string-array>
 
     <string-array name="array_destination">
         <item>Select Your Destination</item>
         <item>Matara</item>
+        <item>Weligama</item>
         <item>Galle</item>
-        <item>Baddegama</item>
-        <item>Elpitiya</item>
-        <item>Dodangoda</item>
+        <item>Hikkaduwa</item>
+        <item>Ambalangoda</item>
+        <item>Benthota</item>
+        <item>Aluthgama</item>
+        <item>Kaluthara</item>
+        <item>Panadura</item>
+        <item>Moratuwa</item>
+        <item>Bambalapitiya</item>
+        <item>Colombo</item>
+        <item>Maradana</item>
+        <item>Ragama</item>
+        <item>Gampaha</item>
     </string-array>
 </resources>
