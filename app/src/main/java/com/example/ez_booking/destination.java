@@ -1,9 +1,13 @@
 package com.example.ez_booking;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -72,7 +76,28 @@ public class destination extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
 
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.dot3menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.home:
+                setContentView(R.layout.activity_splash);
+                break;
+            case R.id.about:
+                // about text
+                break;
+            case R.id.logout:
+                finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
