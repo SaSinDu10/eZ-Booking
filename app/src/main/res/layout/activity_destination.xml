@@ -19,6 +19,7 @@
 
     <Spinner
         android:id="@+id/spinnerSource"
+        android:enabled="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSource"
@@ -43,6 +44,7 @@
 
     <Spinner
         android:id="@+id/spinnerDestination"
+        android:enabled="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtDestination"
