@@ -43,7 +43,7 @@ public class Qrcode extends AppCompatActivity {
 
                 //Initialize Bit matrix
                 try {
-                    BitMatrix matrix = writer.encode(sText, BarcodeFormat.QR_CODE,400,400);
+                    BitMatrix matrix = writer.encode(sText, BarcodeFormat.QR_CODE,300,300);
                     BarcodeEncoder encoder = new BarcodeEncoder();
                     Bitmap bitmap = encoder.createBitmap(matrix);
                     imgQr.setImageBitmap(bitmap);
