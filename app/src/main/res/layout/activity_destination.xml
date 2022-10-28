@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:padding="10dp"
     android:background="@drawable/bg_image"
     tools:context=".destination">
 
@@ -13,13 +13,13 @@
         android:id="@+id/txtSource"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/spinnerSchedule"
         android:layout_alignTop="@+id/spinnerSchedule"
-        android:layout_alignEnd="@+id/spinnerSchedule"
-        android:layout_marginStart="-17dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="-7dp"
-        android:layout_marginBottom="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
         android:text="Source*"
         android:textSize="20sp" />
 
@@ -28,9 +28,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSource"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="40dp"
         android:enabled="false" />
 
@@ -39,9 +40,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerSource"
-        android:layout_alignEnd="@+id/spinnerSource"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="20dp"
         android:text="Destination*"
         android:textSize="20sp" />
@@ -51,11 +54,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtDestination"
-        android:layout_alignStart="@+id/txtDestination"
-        android:layout_alignEnd="@+id/txtDestination"
-        android:layout_marginStart="-5dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="-12dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="10dp"
         android:enabled="false" />
 
@@ -63,11 +65,11 @@
         android:id="@+id/txtSchedule"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/spinnerDestination"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
         android:text="Schedule*"
         android:textSize="20sp" />
 
@@ -76,11 +78,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtSchedule"
-        android:layout_alignStart="@+id/txtSchedule"
-        android:layout_alignEnd="@+id/txtSchedule"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="-19dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="10dp" />
 
     <Button
@@ -88,13 +90,10 @@
         android:layout_width="106dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerDestination"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="141dp"
-        android:text="Next"
-        android:textAlignment="center" />
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="152dp"
+        android:text="Next" />
 
 
 </RelativeLayout>
