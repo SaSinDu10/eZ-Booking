@@ -3,6 +3,7 @@ package com.example.ez_booking;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,6 +19,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class destination extends AppCompatActivity {
 
@@ -66,9 +68,33 @@ public class destination extends AppCompatActivity {
         btnNext2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String source = spinnerSource.getSelectedItem().toString();
-                String destination = spinnerDestination.getSelectedItem().toString();
-                //Toast.makeText(activity_destination.this, source + ", "+ destination,Toast.LENGTH_SHORT).show();
+
+                ((DocumentReference) spinnerSource.getSelectedItem()).get()
+                    .addOnSuccessListener(documentSnapshot1 -> {
+                        Stop s1 = documentSnapshot1.toObject(Stop.class);
+
+                        ((DocumentReference) spinnerDestination.getSelectedItem()).get()
+                            .addOnSuccessListener(documentSnapshot2 -> {
+                                Stop s2 = documentSnapshot2.toObject(Stop.class);
+
+                                Intent intent = new Intent(destination.this, Qrcode.class);
+
+                                intent.putExtra("from", AdapterUtils.capitalize(((DocumentReference) spinnerSource.getSelectedItem()).getId()));
+                                intent.putExtra("to", AdapterUtils.capitalize(((DocumentReference) spinnerDestination.getSelectedItem()).getId()));
+                                intent.putExtra("time", new Date().toString());
+
+                                int passengers = 2;
+                                intent.putExtra("passengers", passengers);
+
+                                double d1 = s1.getCoords().getLatitude() - s2.getCoords().getLatitude();
+                                double d2 = s1.getCoords().getLongitude() - s2.getCoords().getLongitude();
+                                double distance = Math.sqrt((d1*d1)+(d2*d2));
+                                intent.putExtra("amount", distance * passengers);
+
+                                startActivity(intent);
+
+                            });
+                    });
             }
         });
     }
