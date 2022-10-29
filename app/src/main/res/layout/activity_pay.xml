@@ -14,6 +14,7 @@
         android:layout_marginTop="20dp"
         android:text="Payment Details"
         android:textSize="35dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,18 +26,19 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="80dp"
         android:text="Account Number"
-        android:textSize="15dp"
+        android:textSize="17dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtAccountNo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
+        android:layout_width="288dp"
+        android:layout_height="36dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
+        android:inputType="number"
+        android:background="#2011"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
@@ -49,20 +51,20 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:text="Expire Date"
-        android:textSize="15dp"
+        android:textSize="17dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAccountNo" />
 
     <EditText
         android:id="@+id/txtExpireDate"
-        android:layout_width="345dp"
-        android:layout_height="43dp"
+        android:layout_width="302dp"
+        android:layout_height="42dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         android:hint="DD/YY"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
+        android:inputType="none"
+        android:background="#2020"
+        app:layout_constraintEnd_toEndOf="@+id/txtAccountNo"
+        app:layout_constraintStart_toStartOf="@+id/txtAccountNo"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="MissingConstraints" />
 
@@ -73,18 +75,20 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:text="CVV"
-        android:textSize="15dp"
+        android:textSize="17dp"
+        android:textColorHighlight="#201112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtExpireDate" />
 
     <EditText
         android:id="@+id/txtCvv"
-        android:layout_width="345dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="296dp"
+        android:layout_height="45dp"
         android:layout_marginTop="12dp"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="numberPassword"
+        android:background="#2020"
+        app:layout_constraintEnd_toEndOf="@+id/txtExpireDate"
+        app:layout_constraintStart_toStartOf="@+id/txtExpireDate"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:ignore="MissingConstraints" />
 

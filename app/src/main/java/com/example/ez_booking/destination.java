@@ -112,10 +112,6 @@ public class destination extends AppCompatActivity {
             case R.id.home:
                 setContentView(R.layout.activity_splash);
                 break;
-            case R.id.about:
-                // about text
-
-                break;
             case R.id.logout:
                 setContentView(R.layout.activity_login);
                 break;
