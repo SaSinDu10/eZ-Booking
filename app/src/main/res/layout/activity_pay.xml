@@ -57,13 +57,12 @@
         android:id="@+id/txtExpireDate"
         android:layout_width="345dp"
         android:layout_height="43dp"
-        android:layout_marginStart="32dp"
-        android:hint="DD/YY"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:inputType="number"
+        android:hint="DD/YY"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="MissingConstraints" />
 
@@ -83,14 +82,14 @@
         android:layout_width="345dp"
         android:layout_height="43dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnNext2"
+        android:id="@+id/btnPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

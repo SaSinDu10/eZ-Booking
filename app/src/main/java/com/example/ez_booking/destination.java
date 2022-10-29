@@ -77,7 +77,7 @@ public class destination extends AppCompatActivity {
                             .addOnSuccessListener(documentSnapshot2 -> {
                                 Stop s2 = documentSnapshot2.toObject(Stop.class);
 
-                                Intent intent = new Intent(destination.this, Qrcode.class);
+                                Intent intent = new Intent(destination.this, pay.class);
 
                                 intent.putExtra("from", AdapterUtils.capitalize(((DocumentReference) spinnerSource.getSelectedItem()).getId()));
                                 intent.putExtra("to", AdapterUtils.capitalize(((DocumentReference) spinnerDestination.getSelectedItem()).getId()));
@@ -103,7 +103,7 @@ public class destination extends AppCompatActivity {
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.dot3menu,menu);
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     @Override
@@ -114,9 +114,12 @@ public class destination extends AppCompatActivity {
                 break;
             case R.id.about:
                 // about text
+
                 break;
             case R.id.logout:
-                finish();
+                setContentView(R.layout.activity_login);
+                break;
+
         }
         return super.onOptionsItemSelected(item);
     }

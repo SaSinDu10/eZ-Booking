@@ -1,10 +1,14 @@
 package com.example.ez_booking;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -55,5 +59,28 @@ public class Qrcode extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.dot3menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.home:
+                setContentView(R.layout.activity_splash);
+                break;
+            case R.id.about:
+                // about text
+                break;
+            case R.id.logout:
+                setContentView(R.layout.activity_login);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
