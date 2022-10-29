@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,8 +13,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class pay extends AppCompatActivity {
+import com.google.firebase.firestore.FirebaseFirestore;
 
+public class pay extends AppCompatActivity {
+    FirebaseFirestore db;
     Button btnPay;
 
     @Override
@@ -21,9 +24,15 @@ public class pay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
 
+        db = FirebaseFirestore.getInstance();
+
         final EditText mAccount = findViewById(R.id.txtAccountNo);
         final EditText mExDate = findViewById(R.id.txtExpireDate);
         final EditText mCvv = findViewById(R.id.txtCvv);
+
+        String vehicle = getIntent().getStringExtra("vehicle");
+        String scheduleId = getIntent().getStringExtra("scheduleId");
+        int passengers = getIntent().getIntExtra("passengers", 1);
 
         btnPay = findViewById(R.id.btnPay);
         btnPay.setOnClickListener(new View.OnClickListener() {
@@ -33,8 +42,17 @@ public class pay extends AppCompatActivity {
                 String expireDate = mExDate.getText().toString();
                 String cvv = mCvv.getText().toString();
 
-                Intent intent = new Intent(pay.this,Qrcode.class);
+                db.collection("vehicles").document(vehicle).collection("schedules").document(scheduleId).get()
+                    .addOnSuccessListener(scheduleSnapshot -> {
+                        Schedule schedule = scheduleSnapshot.toObject(Schedule.class);
+                        schedule.decrementCapacity(passengers);
 
+                        db.collection("vehicles").document(vehicle).collection("schedules").document(scheduleId).set(schedule);
+
+                        Intent intent = new Intent(pay.this,Qrcode.class);
+                        intent.putExtras(getIntent());
+                        startActivity(intent);
+                    });
             }
         });
 

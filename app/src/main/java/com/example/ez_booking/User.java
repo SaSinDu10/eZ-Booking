@@ -51,6 +51,10 @@ class Schedule {
     public ArrayList<DocumentReference> getStops() {
         return stops;
     }
+
+    public void decrementCapacity(int passengers) {
+        this.capacity -= passengers;
+    }
 }
 
 class Stop {
