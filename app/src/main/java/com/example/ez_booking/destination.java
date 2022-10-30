@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -26,11 +27,15 @@ public class destination extends AppCompatActivity {
     FirebaseFirestore db;
     Spinner spinnerSource, spinnerDestination, spinnerSchedule;
     Button btnNext2;
+    TextView showValue;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_destination);
+
+        showValue = (TextView) findViewById(R.id.txtCount);
 
         db = FirebaseFirestore.getInstance();
         String vehicle = getIntent().getStringExtra("vehicle");
@@ -99,6 +104,14 @@ public class destination extends AppCompatActivity {
                     });
             }
         });
+    }
+    public void countIn(View view){
+        counter++;
+        showValue.setText(Integer.toString(counter));
+    }
+    public void countDe(View view){
+        counter--;
+        showValue.setText(Integer.toString(counter));
     }
 
     @Override
