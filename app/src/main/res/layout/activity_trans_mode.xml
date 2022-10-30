@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
             android:checked="false"
-            android:text="   Highway Bus"
+            android:text="   Bus"
             android:textSize="24dp"
             android:drawableLeft="@drawable/ic_baseline_directions_bus_24"
             app:layout_constraintEnd_toEndOf="parent"
