@@ -19,7 +19,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class destination extends AppCompatActivity {
@@ -27,15 +26,16 @@ public class destination extends AppCompatActivity {
     FirebaseFirestore db;
     Spinner spinnerSource, spinnerDestination, spinnerSchedule;
     Button btnNext2;
-    TextView showValue;
-    int counter = 0;
+    TextView showPassengers, showAmount;
+    int passengers = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_destination);
 
-        showValue = (TextView) findViewById(R.id.txtCount);
+        showPassengers = (TextView) findViewById(R.id.txtCount);
+        showAmount = (TextView) findViewById(R.id.textView10);
 
         db = FirebaseFirestore.getInstance();
         String vehicle = getIntent().getStringExtra("vehicle");
@@ -89,9 +89,7 @@ public class destination extends AppCompatActivity {
                                 intent.putExtra("from", AdapterUtils.capitalize(((DocumentReference) spinnerSource.getSelectedItem()).getId()));
                                 intent.putExtra("to", AdapterUtils.capitalize(((DocumentReference) spinnerDestination.getSelectedItem()).getId()));
                                 intent.putExtra("time", new Date().toString());
-
-                                int passengers = 2;
-                                intent.putExtra("passengers", passengers);
+                                intent.putExtra("passengers", showPassengers.getText().toString());
 
                                 double d1 = s1.getCoords().getLatitude() - s2.getCoords().getLatitude();
                                 double d2 = s1.getCoords().getLongitude() - s2.getCoords().getLongitude();
@@ -106,12 +104,12 @@ public class destination extends AppCompatActivity {
         });
     }
     public void countIn(View view){
-        counter++;
-        showValue.setText(Integer.toString(counter));
+        passengers++;
+        showPassengers.setText(Integer.toString(passengers));
     }
     public void countDe(View view){
-        counter--;
-        showValue.setText(Integer.toString(counter));
+        passengers--;
+        showPassengers.setText(Integer.toString(passengers));
     }
 
     @Override

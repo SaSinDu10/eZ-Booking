@@ -34,7 +34,8 @@ public class pay extends AppCompatActivity {
                 String cvv = mCvv.getText().toString();
 
                 Intent intent = new Intent(pay.this,Qrcode.class);
-
+                intent.putExtras(getIntent());
+                startActivity(intent);
             }
         });
 
