@@ -26,24 +26,17 @@ public class pay extends AppCompatActivity {
         final EditText mCvv = findViewById(R.id.txtCvv);
 
         btnPay = findViewById(R.id.btnPay);
-        btnPay.setOnClickListener(view -> {
-            Intent intent = new Intent(pay.this,Qrcode.class);
-            startActivity(intent);
-        }) ;
-
-
-        //btnPay.setOnClickListener(new View.OnClickListener() {
-           /* @Override
-            public void  {
-                //String accountNumber = mAccount.getText().toString();
-                //String expireDate = mExDate.getText().toString();
-               // String cvv = mCvv.getText().toString();
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String accountNumber = mAccount.getText().toString();
+                String expireDate = mExDate.getText().toString();
+                String cvv = mCvv.getText().toString();
 
                 Intent intent = new Intent(pay.this,Qrcode.class);
-                startActivity(intent);
 
             }
-        });*/
+        });
 
     }
 

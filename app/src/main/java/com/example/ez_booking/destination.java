@@ -79,6 +79,8 @@ public class destination extends AppCompatActivity {
 
                                 Intent intent = new Intent(destination.this, pay.class);
 
+                                intent.putExtra("vehicle", vehicle);
+                                intent.putExtra("scheduleId", ((DocumentSnapshot) spinnerSchedule.getSelectedItem()).getId());
                                 intent.putExtra("from", AdapterUtils.capitalize(((DocumentReference) spinnerSource.getSelectedItem()).getId()));
                                 intent.putExtra("to", AdapterUtils.capitalize(((DocumentReference) spinnerDestination.getSelectedItem()).getId()));
                                 intent.putExtra("time", new Date().toString());
