@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
-            android:checked="false"
+            android:checked="true"
             android:text="   Bus"
             android:textSize="24dp"
             android:drawableLeft="@drawable/ic_baseline_directions_bus_24"

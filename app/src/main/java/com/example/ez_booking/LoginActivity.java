@@ -64,6 +64,9 @@ public class LoginActivity extends AppCompatActivity {
                         //TODO: Initialize user with required details
                         User newUser = new User();
                         db.collection("users").document(mAuth.getCurrentUser().getEmail()).set(newUser);
+                        Intent intent = new Intent(LoginActivity.this, TransMode.class);
+                        finish();
+                        startActivity(intent);
 
                         Toast.makeText(LoginActivity.this, "createUserWithEmail:success", Toast.LENGTH_SHORT).show();
                     } else {
@@ -81,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Intent intent = new Intent(LoginActivity.this, TransMode.class);
+                        finish();
                         startActivity(intent);
                         Toast.makeText(LoginActivity.this, "signInWithEmail:success", Toast.LENGTH_SHORT).show();
                     } else {
