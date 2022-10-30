@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -56,21 +58,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private void createAccount(String email, String password) {
         mAuth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                 @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        //Add a user entry in the database
-                        //TODO: Initialize user with required details
-                        User newUser = new User();
-                        db.collection("users").document(mAuth.getCurrentUser().getEmail()).set(newUser);
-
-                        Toast.makeText(LoginActivity.this, "createUserWithEmail:success", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(LoginActivity.this, "createUserWithEmail:failure", Toast.LENGTH_SHORT).show();
-                    }
+                public void onSuccess(AuthResult authResult) {
+                    Log.d("eZ", "SignUp");
+                    Intent intent = new Intent(LoginActivity.this, TransMode.class);
+                    finish();
+                    startActivity(intent);
+                    Toast.makeText(LoginActivity.this, "createUserWithEmail:success", Toast.LENGTH_SHORT).show();
                 }
-
             });
     }
 
@@ -81,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Intent intent = new Intent(LoginActivity.this, TransMode.class);
+                        finish();
                         startActivity(intent);
                         Toast.makeText(LoginActivity.this, "signInWithEmail:success", Toast.LENGTH_SHORT).show();
                     } else {
